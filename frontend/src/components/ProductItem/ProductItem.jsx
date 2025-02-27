@@ -50,7 +50,7 @@ const ProductItem = ({product}) => {
           {true ? (
             <>
               <button
-                // onClick={handleAddToCart} 
+                onClick={handleAddToCart} 
                 className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center hover:bg-green-600"
               >
                 -
@@ -67,7 +67,7 @@ const ProductItem = ({product}) => {
             </>
           ) : (
             <button
-            //   onClick={increaseQuantity}
+                 onClick={handleAddToCart}
               className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center hover:bg-green-600"
             >
               +
