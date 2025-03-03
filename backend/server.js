@@ -4,6 +4,7 @@ import 'dotenv/config';
 import { connectDB } from "./config/db.js";
 import userRouter from "./routes/userRouter.js";
 import productRouter from "./routes/productRouter.js";
+import adminRouter from "./routes/adminRouter.js";
 
 //app config
 const app = express();
@@ -18,6 +19,7 @@ connectDB();
 
 //api endpoints for user
 app.use("/api/user", userRouter)
+app.use("/api/admin", adminRouter)
 //api endpoints for product
 app.use("/api/product", productRouter)
 app.use("/images",express.static('uploads'))
